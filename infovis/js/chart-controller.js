@@ -69,7 +69,7 @@ let width = (document.body.offsetWidth < 1200) ? 1200 : document.body.offsetWidt
 // gantt(tasks);
 // gantt()
 
-d3.json("js/data.json", function(error, data) {
+d3.json("infovis/js/data.json", function(error, data) {
   if (error)
     throw error;
 
