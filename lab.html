@@ -41,6 +41,16 @@
   <!-- Stylesheets-->
   <link type="text/css" rel="stylesheet" href="css/main.css">
   <!--  https://cdn.rawgit.com/Paravel/ConvergeSE/v1/fonts/learning-curve-pro/stylesheet.css-->
+  <style>
+    /* temporary */
+    .card {
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: .5rem 2rem;
+      margin: 2rem 4rem 0;
+    }
+  
+  </style>
 </head>
 <body class="no-select loading">
   <!--[if lte IE 9]>
@@ -305,29 +315,31 @@
     <div class="text-center text-white text-wide text-serif">
       <span class="opacity text-line text-small">&nbsp;2016</span>
       <h3 class="text-light text-shine">&nbsp;Research Works</h3>
-      <span class="opacity">&nbsp;Only in Korean For Now</span>
+      <span class="opacity">&nbsp;current and previous works</span>
     </div>
     <br>
     <br>
   </header>
   
   <!-- Portfolio -->
-  <section class="text-center text-serif">
-    <div id="title" class="hidden">
-      <h2>Two-stage Evaluation of <br>Open Source Software Project Efficiency <br>using Data Envelopment Analysis</h2>
-      <p>2016 Fall Semester<br>Guided by Professor Changhee Kim</p>
-    <br>
+  <section class="container text-serif">
+    <div id="title" class="hidden card">
+      <a href="https://doi.org/10.3390/su10093001">
+        <h2>What Is Needed for the Sustainable Success of Open Source Software Projects: Efficiency Analysis of Commit Production Process via Git</h2>
+        <p><i>Sustainability</i> (SCIE/SSCI), vol. 10, no. 9, Aug 2018<br>Jaeyoon Song and Changhee Kim</p>
+      </a>
     </div>
-    <div class="container desktop-only">
-      <embed class="" src="pdf/lab.pdf" width="90%" height="1000px" />
-    </div>
-    <div class="container mobile-only">
-      <br><hr><br><br>
-      <p>Embedding PDF Preview is currently only supported in desktop browsers.</p>
-      <br><hr><br><br>
-    </div>
-    <div class="text-white">
-      <br><br><h2>If you want to continue reading, <br class="hiden-md-up">please <a href="contact"><u>contact</u></a> me.</h2>
+    <div class="card">
+        <a href="https://github.com/SoundGlance">
+          <h2>SoundGlance: Instant Sonification of Visual Cues for Blind Web Users</h2>
+          <p>Research Intern at SNU HCIL<br>Advised by Prof. Jinwook Seo</p>
+        </a>
+      </div>
+    <div class="card">
+      <a href="pdf/lab.pdf">
+        <h2>Two-stage Evaluation of Open Source Software Project Efficiency using Data Envelopment Analysis</h2>
+        <p>2016 Fall Semester<br>Advised by Prof. Changhee Kim</p>
+      </a>
     </div>
   </section>
   

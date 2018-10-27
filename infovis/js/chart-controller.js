@@ -196,9 +196,7 @@ d3.json("infovis/js/data.json", function(error, data) {
           location_tasks.push(sample_location+i)
       }
   }
-  console.log(data);
   gantt.taskTypes(color_tasks).redraw(tasks);
-  console.log(location_tasks)
 });
 
 function getKeyByValue(object, value) {
