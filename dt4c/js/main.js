@@ -115,8 +115,8 @@ function changeLightGray(toLightGray) {
 // visualization
 function redraw() {
     q = d3.queue();
-    q.defer(d3.json, './data/setting.json')
-    q.defer(d3.csv, './data/friends.csv')
+    q.defer(d3.json, './dt4c/data/setting.json')
+    q.defer(d3.csv, './dt4c/data/friends.csv')
     q.await(drawCircos)
 }
 function getNames() {
@@ -455,6 +455,6 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
         .render()
   }
 
-q.defer(d3.json, './data/setting.json')
-q.defer(d3.csv, './data/friends.csv')
+q.defer(d3.json, './dt4c/data/setting.json')
+q.defer(d3.csv, './dt4c/data/friends.csv')
 q.await(drawCircos)
