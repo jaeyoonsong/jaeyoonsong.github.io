@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+
 let width = document.getElementById("chart").offsetWidth;
 let edgeThickness = 54, vertexThickness = 10;
 // global circle
@@ -115,8 +117,8 @@ function changeLightGray(toLightGray) {
 // visualization
 function redraw() {
     q = d3.queue();
-    q.defer(d3.json, './dt4c/data/setting.json')
-    q.defer(d3.csv, './dt4c/data/friends.csv')
+    q.defer(d3.json, './data/setting.json')
+    q.defer(d3.csv, './data/friends.csv')
     q.await(drawCircos)
 }
 function getNames() {
@@ -164,7 +166,7 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
     
     // colored bands
     setting = setting
-  
+    
     // data for lines
     lineData = friends
     // map filtered elements to array => data that will be printed
@@ -188,94 +190,94 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
     vertex1 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 1
+        return d.edge >= 1
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
 
     vertex2 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 2
+        return d.edge >= 2
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
 
     vertex3 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 3
+        return d.edge >= 3
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
 
     vertex4 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 4
+        return d.edge >= 4
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
 
     vertex5 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 5
+        return d.edge >= 5
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
 
     vertex6 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 6
+        return d.edge >= 6
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
 
     vertex7 = friends
     // return elements with given condition
     .filter(function (d) {
-      return d.edge >= 6 && d.isConnected != "true"
+        return d.edge >= 6 && d.isConnected != "true"
     })
     // map filtered elements to array => data that will be printed
     .map(function (d) {
-      d.block_id = "f"
-      d.start = parseInt(d.id)
-      d.end = parseInt(d.id) + 0.9
-      return d
+        d.block_id = "f"
+        d.start = parseInt(d.id)
+        d.end = parseInt(d.id) + 0.9
+        return d
     })
-  
+    
     circos
         // layout(data, config)
         .layout(
@@ -317,8 +319,8 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             margin: 0.01 * length,
             direction: 'out',
             strokeWidth: 0,
-            color: function (d) {return colorVertex(d, 2)},
-            tooltipContent: function (d) {return tooltipVertex(d.vertex1, 2)}
+            color: function (d) {return colorVertex(d, 2)}
+            // tooltipContent: function (d) {return tooltipVertex(d.vertex1, 2)}
         })
         .stack('edge2', vertex3, { // block_id, start(index), end(index+1)
             innerRadius: 0.417,
@@ -337,8 +339,8 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             margin: 0.01 * length,
             direction: 'out',
             strokeWidth: 0,
-            color: function (d) {return colorVertex(d, 3)},
-            tooltipContent: function (d) {return tooltipVertex(d.vertex2, 3)}
+            color: function (d) {return colorVertex(d, 3)}
+            // tooltipContent: function (d) {return tooltipVertex(d.vertex2, 3)}
         })
         .stack('edge3', vertex4, { // block_id, start(index), end(index+1)
             innerRadius: 0.517,
@@ -357,8 +359,8 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             margin: 0.01 * length,
             direction: 'out',
             strokeWidth: 0,
-            color: function (d) {return colorVertex(d, 4)},
-            tooltipContent: function (d) {return tooltipVertex(d.vertex2, 4)}
+            color: function (d) {return colorVertex(d, 4)}
+            // tooltipContent: function (d) {return tooltipVertex(d.vertex2, 4)}
         })
         .stack('edge4', vertex5, { // block_id, start(index), end(index+1)
             innerRadius: 0.617,
@@ -377,7 +379,7 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             margin: 0.01 * length,
             direction: 'out',
             strokeWidth: 0,
-            color: function (d) {return colorVertex(d, 5)},
+            color: function (d) {return colorVertex(d, 5)}
             tooltipContent: function (d) {return tooltipVertex(d.vertex2, 5)}
         })
         .stack('edge5', vertex6, { // block_id, start(index), end(index+1)
@@ -397,18 +399,18 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             margin: 0.01 * length,
             direction: 'out',
             strokeWidth: 0,
-            color: function (d) {return colorVertex(d, 6)},
-            tooltipContent: function (d) {return tooltipVertex(d.vertex2, 6)}
+            color: function (d) {return colorVertex(d, 6)}
+            // tooltipContent: function (d) {return tooltipVertex(d.vertex2, 6)}
         })
         .line('bg', lineData, { 
             innerRadius: 0.817,
             outerRadius: 0.9,
             color: 'transparent',
             backgrounds: [
-              {
+                {
                 opacity: 0.9,
                 color: colors.veryDarkBlue // very dark blue
-              }
+                }
             ]
         })
         .stack('edge7', vertex7, { // block_id, start(index), end(index+1)
@@ -430,11 +432,11 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             max: 360,
             color: '#737788', // very dark blue
             axes: [
-              {
+                {
                 spacing: 36,
                 thickness: 1,
                 color: '#f7f7f7' // very light gray
-              }
+                }
             ],
             tooltipContent: function() {
                 return "friendliness"
@@ -453,8 +455,10 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
         
         // render
         .render()
-  }
+    }    
 
-q.defer(d3.json, './dt4c/data/setting.json')
-q.defer(d3.csv, './dt4c/data/friends.csv')
-q.await(drawCircos)
+    q.defer(d3.json, './dt4c/data/setting.json')
+    q.defer(d3.csv, './dt4c/data/friends.csv')
+    q.await(drawCircos)
+
+});
