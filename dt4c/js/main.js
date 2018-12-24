@@ -380,7 +380,7 @@ let drawCircos = function (error, setting, friends) { // parameters from d3 queu
             direction: 'out',
             strokeWidth: 0,
             color: function (d) {return colorVertex(d, 5)}
-            tooltipContent: function (d) {return tooltipVertex(d.vertex2, 5)}
+            // tooltipContent: function (d) {return tooltipVertex(d.vertex2, 5)}
         })
         .stack('edge5', vertex6, { // block_id, start(index), end(index+1)
             innerRadius: 0.717,
