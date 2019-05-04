@@ -110,7 +110,7 @@ $resetTime: 1s;
       transform: rotateX(-90deg) translateY(-1*$width/2) !important;
     }
     .behind {
-      transform: rotateY(180deg) rotateX(-90deg) translateY(-1*$width/2) !important;
+      transform: rotateY(-180deg) rotateX(-90deg) translateY(-1*$width/2) !important;
     }
   }
   &.origin-bottom {
@@ -183,7 +183,7 @@ $resetTime: 1s;
       transform: rotateX(-90deg) translateY(-1*$dtWidth/2) !important;
     }
     .behind {
-      transform: rotateY(180deg) rotateX(-90deg) translateY(-1*$dtWidth/2) !important;
+      transform: rotateY(-180deg) rotateX(-90deg) translateY(-1*$dtWidth/2) !important;
     }
   }
 }
