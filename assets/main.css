@@ -1110,7 +1110,11 @@ section {
 
 .modal.is-open {
   display: block;
-  position: relative; }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; }
 
 .modal__overlay {
   position: fixed;
