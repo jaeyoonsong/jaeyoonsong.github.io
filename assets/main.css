@@ -1100,12 +1100,17 @@ section {
 /**************************\
   Basic Modal Styles
 \**************************/
+body.modal-open {
+  overflow: hidden; }
+
 .modal {
   display: none;
   z-index: 1001; }
 
 .modal.is-open {
-  display: block; }
+  display: block;
+  position: fixed;
+  overflow: hidden; }
 
 .modal__overlay {
   position: fixed;
@@ -1134,6 +1139,9 @@ section {
       left: 10vw;
       right: 10vw;
       border-radius: 4px; } }
+  @media (max-width: 800px) {
+    .modal__container {
+      height: 100vh; } }
 
 .modal__header {
   display: flex;
