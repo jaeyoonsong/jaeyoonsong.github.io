@@ -150,7 +150,7 @@
     <div class="box-visible ">
         <h3><b>Six Degrees of Jaeyoon Song</b></h3>
         <p>
-            Checking ‘six degrees of Kevin Bacon’ for my relationships on Facebook?
+            Checking ‘six degrees of Kevin Bacon’ for my relationships on Facebook
 
         </p>
         <p><a>
@@ -422,7 +422,10 @@
 
 <script>
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    let modal = document.getElementById("modal");
+
     Array.from(document.querySelectorAll(".closeModal")).forEach(function(ele) {
         ele.onclick = function() {
             closeModal();
@@ -430,11 +433,13 @@ window.onload = function() {
     })
 
     function openModal() {
-        document.getElementById("modal").classList.add("is-open");
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
         document.body.classList.add("modal-open");
     }
     function closeModal() {
         document.getElementById("modal").classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
         document.body.classList.remove("modal-open");
     }
         
@@ -478,7 +483,7 @@ window.onload = function() {
          
         img += "<div><img src='/dt4c/img/img-3-small.jpg' alt='Loading...'></div>";
         
-        document.getElementById("modal-title").innerHTML = "Six Degrees of Jaeyoon Song<br><small>Checking 'six degrees of Kevin Bacon' for my relationships on Facebook?</small>";
+        document.getElementById("modal-title").innerHTML = "Six Degrees of Jaeyoon Song<br><small>Checking 'six degrees of Kevin Bacon' for my relationships on Facebook</small>";
         document.getElementById("modal-content").innerHTML = img + "In preparation"
         document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
@@ -849,12 +854,12 @@ window.onload = function() {
         openModal();
     }
     
-}
+});
 </script>
 
 <div id="modal" class="modal micromodal-slide" aria-hidden="false">
     <div class="closeModal modal__overlay" tabindex="-1">
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <div class="modal__container">
             <header class="modal__header">
                 <h2 id="modal-title" class="modal__title">
                 Title of the project

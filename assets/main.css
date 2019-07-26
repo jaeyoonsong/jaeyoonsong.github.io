@@ -1108,9 +1108,7 @@ body.modal-open {
   z-index: 1001; }
 
 .modal.is-open {
-  display: block;
-  position: fixed;
-  overflow: hidden; }
+  display: block; }
 
 .modal__overlay {
   position: fixed;
