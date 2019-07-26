@@ -174,11 +174,6 @@ pre {
 /**
  * Clearfix
  */
-.footer-col-wrapper:after {
-  content: "";
-  display: table;
-  clear: both; }
-
 /**
  * Icons
  */
@@ -705,36 +700,6 @@ table {
   color: #828282;
   margin-left: -15px; }
 
-.footer-col {
-  width: -webkit-calc(100% - (30px / 2));
-  width: calc(100% - (30px / 2));
-  margin-bottom: 15px;
-  padding-left: 15px; }
-
-.footer-col-1,
-.footer-col-2 {
-  width: -webkit-calc(50% - (30px / 2));
-  width: calc(50% - (30px / 2)); }
-
-.footer-col-3 {
-  width: -webkit-calc(100% - (30px / 2));
-  width: calc(100% - (30px / 2)); }
-
-@media screen and (min-width: 800px) {
-  .footer-col-1 {
-    width: -webkit-calc(35% - (30px / 2));
-    width: calc(35% - (30px / 2)); }
-
-  .footer-col-2 {
-    width: -webkit-calc(20% - (30px / 2));
-    width: calc(20% - (30px / 2)); }
-
-  .footer-col-3 {
-    width: -webkit-calc(45% - (30px / 2));
-    width: calc(45% - (30px / 2)); } }
-@media screen and (min-width: 600px) {
-  .footer-col {
-    float: left; } }
 /**
  * Page content
  */
@@ -1071,52 +1036,57 @@ section {
 
 .project {
   position: relative;
-  perspective: 100vw;
-  transform-style: preserve-3d;
   cursor: pointer; }
-  .project .box-unvisible {
-    position: absolute; }
-    .project .box-unvisible.top {
-      top: 0;
-      right: 0;
-      bottom: 50%;
-      left: 0;
-      clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0); }
-      .project .box-unvisible.top:hover ~ .box-visible {
-        transform: rotateX(10deg); }
-    .project .box-unvisible.right {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 50%;
-      clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%); }
-      .project .box-unvisible.right:hover ~ .box-visible {
-        transform: rotateY(10deg); }
-    .project .box-unvisible.bottom {
-      top: 50%;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0); }
-      .project .box-unvisible.bottom:hover ~ .box-visible {
-        transform: rotateX(-10deg); }
-    .project .box-unvisible.left {
-      top: 0;
-      right: 50%;
-      bottom: 0;
-      left: 0;
-      clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0); }
-      .project .box-unvisible.left:hover ~ .box-visible {
-        transform: rotateY(-10deg); }
+  @media screen and (min-width: 600px) {
+    .project {
+      perspective: 100vw;
+      transform-style: preserve-3d; } }
+  @media screen and (min-width: 600px) {
+    .project .box-unvisible {
+      position: absolute; }
+      .project .box-unvisible.top {
+        top: 0;
+        right: 0;
+        bottom: 50%;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0 0); }
+        .project .box-unvisible.top:hover ~ .box-visible {
+          transform: rotateX(10deg); }
+      .project .box-unvisible.right {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 50%); }
+        .project .box-unvisible.right:hover ~ .box-visible {
+          transform: rotateY(10deg); }
+      .project .box-unvisible.bottom {
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0); }
+        .project .box-unvisible.bottom:hover ~ .box-visible {
+          transform: rotateX(-10deg); }
+      .project .box-unvisible.left {
+        top: 0;
+        right: 50%;
+        bottom: 0;
+        left: 0;
+        clip-path: polygon(0 0, 100% 50%, 0 100%, 0 0); }
+        .project .box-unvisible.left:hover ~ .box-visible {
+          transform: rotateY(-10deg); } }
   .project .box-visible {
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    pointer-events: none;
-    will-change: transform;
-    transition: transform 0.5s;
     padding: 1rem 1.2rem;
     box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.15); }
+    @media screen and (min-width: 600px) {
+      .project .box-visible {
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        pointer-events: none;
+        will-change: transform;
+        transition: transform 0.5s; } }
     .project .box-visible p {
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -1149,11 +1119,10 @@ section {
   align-items: center; }
 
 .modal__container {
+  padding: 3rem 1.2rem;
   background-color: #fff;
-  padding: 3rem;
   max-width: 100vw;
   max-height: 100vh;
-  border-radius: 4px;
   overflow-y: auto;
   z-index: 1001;
   position: absolute;
@@ -1161,8 +1130,10 @@ section {
   right: 0; }
   @media screen and (min-width: 800px) {
     .modal__container {
+      padding: 3rem;
       left: 10vw;
-      right: 10vw; } }
+      right: 10vw;
+      border-radius: 4px; } }
 
 .modal__header {
   display: flex;
