@@ -1101,14 +1101,16 @@ section {
   Basic Modal Styles
 \**************************/
 body.modal-open {
-  overflow: hidden; }
+  overflow: hidden;
+  margin: 0px !important; }
 
 .modal {
   display: none;
   z-index: 1001; }
 
 .modal.is-open {
-  display: block; }
+  display: block;
+  position: relative; }
 
 .modal__overlay {
   position: fixed;
