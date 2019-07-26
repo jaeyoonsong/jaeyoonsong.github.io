@@ -1101,8 +1101,11 @@ section {
   Basic Modal Styles
 \**************************/
 .modal-open {
-  overflow: hidden;
+  overflow: hidden !important;
   margin: 0px !important; }
+
+.new-body {
+  height: 100vh; }
 
 .modal {
   display: none;

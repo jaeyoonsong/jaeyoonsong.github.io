@@ -21,7 +21,8 @@
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
     <script src="/assets/all.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jaeyoon Song" /></head><body><header class="site-header">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jaeyoon Song" /></head><body>
+    <div class="new-body"><header class="site-header">
 
     <div class="wrapper"><a class="site-title" rel="author" href="/">
         <img src="/images/logo.png" width="30">
@@ -158,6 +159,28 @@
 
     </div>
   
-  </footer></body>
+  </footer></div>
+
+    <div id="modal" class="modal micromodal-slide" aria-hidden="false">
+      <div class="closeModal modal__overlay" tabindex="-1">
+          <div class="modal__container">
+              <header class="modal__header">
+                  <h2 id="modal-title" class="modal__title">
+                  Title of the project
+                  </h2>
+                  <button class="closeModal modal__close">
+                  </button>
+              </header>
+              <div id="modal-extra">
+                  Buttons
+              </div>
+              <div id="modal-content" class="modal__content">
+                  Project description
+              </div>
+          </div>
+      </div>
+    </div>
+
+  </body>
 
 </html>
