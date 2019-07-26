@@ -120,42 +120,42 @@ function changeContent(i, hd, txt) {
     {
       num: "04",
       title: "Lab",
-      url: "lab.html",
+      url: "cube/lab.html",
       bold: "Academic Works:",
       light: "Human Computer Interaction Topics"
     },
     {
       num: "01",
       title: "About",
-      url: "about.html",
+      url: "cube/about.html",
       bold: "Brief Introduction of Me:",
       light: "Who I am, What I love, What I pursue"
     },
     {
       num: "04",
       title: "Lab",
-      url: "lab.html",
+      url: "cube/lab.html",
       bold: "Academic Works:",
       light: "Human Computer Interaction Topics"
     },
     {
       num: "03",
       title: "Works",
-      url: "works.html",
+      url: "cube/works.html",
       bold: "Web Project Portfolio:",
       light: "Selected web projects I've worked on"
     },
     {
       num: "05",
       title: "Blog",
-      url: "https://jyoonsong.github.io",
+      url: "cube/https://jyoonsong.github.io",
       bold: "My blog in Korean:",
       light: "Powered by Github Pages & Jekyll"
     },
     {
       num: "02",
       title: "Contact",
-      url: "contact.html",
+      url: "cube/contact.html",
       bold: "Contact Information:",
       light: "Check my availability and hire me :D"
     }

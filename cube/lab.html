@@ -11,11 +11,11 @@
   <meta name="description" content="Portfolio of interactive designer/developer JaeYoon.">
   <meta name="copyright" content="Jaeyoon Song"/>
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00f0ff">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00f0ff">
   <!-- Facebook -->
   <meta property="fb:app_id" content="123456789">
   <meta property="og:url" content="https://www.example.com/path/to/page.html">
@@ -41,6 +41,16 @@
   <!-- Stylesheets-->
   <link type="text/css" rel="stylesheet" href="css/main.css">
   <!--  https://cdn.rawgit.com/Paravel/ConvergeSE/v1/fonts/learning-curve-pro/stylesheet.css-->
+  <style>
+    /* temporary */
+    .card {
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      padding: .5rem 2rem;
+      margin: 2rem 4rem 0;
+    }
+  
+  </style>
 </head>
 <body class="no-select loading">
   <!--[if lte IE 9]>
@@ -53,7 +63,7 @@
   <!-- Navigation -->
   <nav id="nav" class="nav">
     <h1 class="nav-brand">
-      <a href="/">
+      <a href="/cube">
         <img class="img-responsive" src="img/logo.png" alt="logo"/>
       </a>
     </h1>
@@ -303,60 +313,32 @@
   <!-- Header -->
   <header class="flex flex-column center-x center-y">
     <div class="text-center text-white text-wide text-serif">
-      <span class="opacity text-line text-small">&nbsp;00/06</span>
-      <h3 class="text-light text-shine">&nbsp;Portfolio<span class="hidden-sm-down"> of Selected Works</span></h3>
-      <span class="opacity">&nbsp;Scroll Down</span>
+      <span class="opacity text-line text-small">&nbsp;2016</span>
+      <h3 class="text-light text-shine">&nbsp;Research Works</h3>
+      <span class="opacity">&nbsp;current and previous works</span>
     </div>
     <br>
     <br>
   </header>
   
   <!-- Portfolio -->
-  <section class="flex center-y">
-    <div class="container text-white">
-      <a href="https://chartmetric.io" class="portfolio hidden" target="_blank"> <!-- works/0 -->
-        <img class="img-responsive" src="img/chartmetric.png" alt="chartmetric">
-        <div class="portfolio-des">
-          <span class="opacity text-light text-serif">0 1 / 0 5</span>
-          <h2 class="text-serif">Chartmetric</h2>
-          <span class="opacity text-light">Design &amp; Front-end Engineering Intern (2017)</span>
-        </div>
+  <section class="container text-serif">
+    <div id="title" class="hidden card">
+      <a href="https://www.mdpi.com/2071-1050/10/9/3001">
+        <h2>What Is Needed for the Sustainable Success of Open Source Software Projects: Efficiency Analysis of Commit Production Process via Git</h2>
+        <p><i>Sustainability</i> (SCIE/SSCI), vol. 10, no. 9, Aug 2018<br>Jaeyoon Song and Changhee Kim</p>
       </a>
-      <a href="https://dribbble.com/shots/3971215-Landing-Page-for-Korean-Startup" class="portfolio hidden" target="_blank">
-        <img class="img-responsive" src="img/mercury.jpg" alt="mercury">
-        <div class="portfolio-des">
-          <span class="opacity text-light text-serif">0 2 / 0 5</span>
-          <h2 class="text-serif">Mercury</h2>
-          <span class="opacity text-light">Lead UX Engineer (2017)<br><i class="prize"></i>SK Startup Contest</span>
-        </div>
-      </a>
-      <a href="http://shashagungun.com" class="portfolio hidden" target="_blank">
-        <img class="img-responsive" src="img/shasha.jpg" alt="shashagungun">
-        <div class="portfolio-des">
-          <span class="opacity text-light text-serif">0 3 / 0 5</span>
-          <h2 class="text-serif">Shashagungun</h2>
-          <span class="opacity text-light">Founder, Designer, Front-end <span class="hidden-md-down">Developer </span>(2016)<br><i class="prize"></i>SNULife SANDBOX Winner</span>
-        </div>
-      </a>
-      <a href="http://scsc.snu.ac.kr" class="portfolio hidden" target="_blank">
-        <img class="img-responsive" src="img/scsc.png" alt="SCSC">
-        <div class="portfolio-des">
-          <span class="opacity text-light text-serif">0 4 / 0 5</span>
-          <h2 class="text-serif">S. C. S. C.</h2>
-          <span class="opacity text-light">
-            <span class="hidden-md-down">Seoul National University</span>
-            <span class="hidden-lg-up">SNU</span>
-            Computer Study Club<br>Front-end Developer (2015)
-          </span>
-        </div>
-      </a>
-      <a href="dt4c" class="portfolio hidden" target="_blank">
-        <img class="img-responsive" src="img/graphic.jpg" alt="graphic designs">
-        <div class="portfolio-des">
-          <span class="opacity text-light text-serif">0 5 / 0 5</span>
-          <h2 class="text-serif">Graphic Designs</h2>
-          <span class="opacity text-light">Posters, Card News etc</span>
-        </div>
+    </div>
+    <div class="card">
+        <a href="https://dl.acm.org/citation.cfm?id=3312865">
+          <h2>SoundGlance: Instant Sonification of Visual Cues for Blind Web Users</h2>
+          <p>CHI 2019 Late-breaking Work<br>Advised by Prof. Jinwook Seo</p>
+        </a>
+      </div>
+    <div class="card">
+      <a href="pdf/lab.pdf">
+        <h2>Two-stage Evaluation of Open Source Software Project Efficiency using Data Envelopment Analysis</h2>
+        <p>2016 Fall Semester<br>Advised by Prof. Changhee Kim</p>
       </a>
     </div>
   </section>
@@ -365,12 +347,12 @@
   <footer class="footer flex center-x center-y hidden">
     <div class="container flex justify-around">
       <div class="footer-nav flex flex-column center-y text-white text-serif">
-        <a href="contact" class="text-center text-shine text-wide">Previous: <br class="hidden-md-up">Contact</a>
-        <a href="contact"><span class="opacity">02</span></a>
+        <a href="works" class="text-center text-shine text-wide">Previous: <br class="hidden-md-up">Works</a>
+        <a href="works"><span class="opacity">03</span></a>
       </div>
       <div class="footer-nav flex flex-column center-y text-white text-serif">
-        <a href="lab" class="text-center text-shine text-wide">Next: <br class="hidden-md-up">Lab</a>
-        <a href="lab"><span class="opacity">04</span></a>
+        <a href="http://blog.jaeyoon.io" class="text-center text-shine text-wide">Next: <br class="hidden-md-up">Blog</a>
+        <a href="http://blog.jaeyoon.io"><span class="opacity">05</span></a>
       </div>
     </div>
   </footer>
@@ -378,51 +360,7 @@
   <script src="js/modernizr.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    var footer = document.querySelector("footer");
-    
-    var controller = new ScrollMagic.Controller();
-    var portfolios = Array.from(document.querySelectorAll(".portfolio"));
-    for (i=0; i<portfolios.length; i++) {
-      var showItems = new ScrollMagic.Scene({triggerElement: portfolios[i], triggerHook: .7})
-                      .setClassToggle(portfolios[i], "show")
-                      .addTo(controller);
-    }
-    var changeBg = new ScrollMagic.Scene({triggerElement: portfolios[0], triggerHook: .7})
-                      .on("enter", function () {
-                        changeWrapper("#fff", "rgba(255,255,255,0)", 1);
-                      })
-                      .on("leave", function () {
-                        changeWrapper("", "", .1);
-                      })
-                      .addTo(controller);
-    var footerChange = new ScrollMagic.Scene({triggerElement: footer, triggerHook: .1})
-                      .on("enter", function () {
-                        changeWrapper("", "", .1);
-                        footer.classList.add("show");
-                        navbar.classList.remove("invert");
-                      })
-                      .on("leave", function () {
-                        changeWrapper("#fff", "rgba(255,255,255,0)", 1);
-                        footer.classList.remove("show");
-                        navbar.classList.add("invert");
-                      })
-                      .addTo(controller);
-    var changeNav = new ScrollMagic.Scene({triggerElement: portfolios[0]})
-                      .on("enter", function () {
-                        navbar.classList.add("invert");
-                      })
-                      .on("leave", function (e) {
-                        navbar.classList.remove("invert");
-                      })
-                      .addTo(controller);
-  
-    function changeWrapper(a, b, c, d) {
-      document.querySelector(".wrapper").style.background = a;
-      document.querySelector(".wrapper").style.borderColor = b;
-      document.querySelector(".wrapper").style.opacity = c;
-    }
-  </script>
+  <script src="js/lab.js"></script>
   
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113321077-1"></script>
@@ -433,5 +371,6 @@
 
     gtag('config', 'UA-113321077-1');
   </script>
+
 </body>
 </html>
