@@ -1100,7 +1100,7 @@ section {
 /**************************\
   Basic Modal Styles
 \**************************/
-body.modal-open {
+.modal-open {
   overflow: hidden;
   margin: 0px !important; }
 
