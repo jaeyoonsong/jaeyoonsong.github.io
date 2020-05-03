@@ -132,7 +132,7 @@ window.onload = function() {
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
-    <a href="http://hcil.snu.ac.kr/system/publications/pdfs/000/000/125/original/LBW1821.pdf" target="_blank">
+    <a href="https://hcil.snu.ac.kr/system/publications/pdfs/000/000/125/original/LBW1821.pdf" target="_blank">
         <i class="far fa-sticky-note" aria-hidden="true"></i> Paper
     </a>
     
@@ -561,7 +561,7 @@ window.onload = function() {
 <div class="extra-links">
     
     
-    <a href="http://shashagungun.com" target="_blank">
+    <a href="https://shashagungun.com" target="_blank">
         <i class="fas fa-link" aria-hidden="true"></i> Link
     </a>
     
