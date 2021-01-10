@@ -1,29 +1,4 @@
-window.onload = function() {
-
-    let nav = document.querySelector(".site-nav")
-    let trigger = document.querySelector(".trigger")
-    let label = document.querySelector("svg text")
-
-    function check(e) {
-        if (nav.classList.contains("active")) {
-            nav.classList.remove("active")
-            trigger.classList.remove("active")
-            document.body.style.position = ""
-            label.innerHTML = "menu"
-        }
-        else {
-            nav.classList.add("active")
-            trigger.classList.add("active")
-            document.body.style.position = "fixed"
-            label.innerHTML = "close"
-        }
-    }
-
-
-    document.querySelector("#sun").addEventListener("click", check)
-    label.addEventListener("click", check)
-
-    
+window.onload = function() {    
 
     let modal = document.getElementById("modal");
 
@@ -42,7 +17,7 @@ window.onload = function() {
 
             document.body.classList.add("modal-open");
             document.querySelector("html").classList.add("modal-open");
-            document.querySelector(".new-body").classList.add("modal-open");
+            document.body.classList.add("modal-open");
         }
         function closeModal() {
             document.getElementById("modal").classList.remove("is-open");
@@ -50,7 +25,7 @@ window.onload = function() {
 
             document.body.classList.remove("modal-open");
             document.querySelector("html").classList.remove("modal-open");
-            document.querySelector(".new-body").classList.remove("modal-open");
+            document.body.classList.remove("modal-open");
 
             let showed = document.querySelector(".project-images img.show");
             if (showed)
@@ -59,12 +34,81 @@ window.onload = function() {
             
         
         
+                document.getElementById("minglr").onclick = function(e) {
+                    if (e.target.tagName == "A")
+                        return;
+
+                    document.getElementById("img-minglr").className = "show";
+                    document.getElementById("modal-title").innerHTML = `Minglr<br><small>Supporting Ad Hoc, Private Conversations at Virtual Conferences</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
+                    document.getElementById("modal-extra").innerHTML = `
+<div class="extra-links">
+    
+    
+    <a href="https://cci.mit.edu/minglr/" target="_blank">
+        <i class="fas fa-link" aria-hidden="true"></i> Link
+    </a>
+    
+    
+    
+    
+    
+    
+    <a href="https://github.com/CCI-MIT/minglr" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i> Code
+    </a>
+    
+</div>
+
+
+`;
+                    document.getElementById("modal-content").innerHTML = ``;
+                    
+                    openModal();
+                }
+        
+                document.getElementById("zatoori").onclick = function(e) {
+                    if (e.target.tagName == "A")
+                        return;
+
+                    document.getElementById("img-zatoori").className = "show";
+                    document.getElementById("modal-title").innerHTML = `Zatoori<br><small>A mobile application that helps people exercise in free time</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
+                    document.getElementById("modal-extra").innerHTML = `
+<div class="extra-links">
+    
+    
+    <a href="https://www.behance.net/gallery/111082311/Zatoori-A-mobile-application-design" target="_blank">
+        <i class="fas fa-link" aria-hidden="true"></i> Link
+    </a>
+    
+    
+    
+    
+    
+    
+</div>
+
+
+`;
+                    document.getElementById("modal-content").innerHTML = ``;
+                    
+                    openModal();
+                }
+        
                 document.getElementById("truth").onclick = function(e) {
                     if (e.target.tagName == "A")
                         return;
 
                     document.getElementById("img-truth").className = "show";
                     document.getElementById("modal-title").innerHTML = `Truth101<br><small>Investigating the truth of Produce 101 results through data on Naver TV and DC Inside.</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -97,6 +141,9 @@ window.onload = function() {
 
                     document.getElementById("img-gaemi").className = "show";
                     document.getElementById("modal-title").innerHTML = `Organic Crowdsourcing<br><small>Credibility Assessment and Critical Thinking through Microtasks while Reading - How to intrinsically motivate readers by personalizing the sequence of microtasks</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -129,6 +176,9 @@ window.onload = function() {
 
                     document.getElementById("img-soundglance").className = "show";
                     document.getElementById("modal-title").innerHTML = `SoundGlance<br><small>Briefing the glanceable cues of Web pages for screen reader users</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -169,6 +219,9 @@ window.onload = function() {
 
                     document.getElementById("img-talkingBoogie").className = "show";
                     document.getElementById("modal-title").innerHTML = `TalkingBoogie<br><small>Collaborative Mobile AAC System for Non-verbal Children with Developmental Disabilities and Their Caregivers</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = `<a class="small black mb-2" href="https://chi2020.acm.org/for-attendees/chi-2020-best-papers-honourable-mentions/">🏆 Won Honorable Mention (top 5%), ACM CHI, May 2020 🏆</small>`
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -195,12 +248,77 @@ window.onload = function() {
                     openModal();
                 }
         
+                document.getElementById("degrees").onclick = function(e) {
+                    if (e.target.tagName == "A")
+                        return;
+
+                    document.getElementById("img-degrees").className = "show";
+                    document.getElementById("modal-title").innerHTML = `Six Degrees of Jaeyoon Song<br><small>Checking 'six degrees of Kevin Bacon' for my relationships on Facebook</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
+                    document.getElementById("modal-extra").innerHTML = `
+<div class="extra-links">
+    
+    
+    <a href="https://jaeyoon.io/dt4c" target="_blank">
+        <i class="fas fa-link" aria-hidden="true"></i> Link
+    </a>
+    
+    
+    
+    
+    
+    
+</div>
+
+
+`;
+                    document.getElementById("modal-content").innerHTML = `<strong>About.</strong> I collected data of my friends at Facebook, friend lists of those friends, friend lists of those friends of friends, and so on—only up to 6 times. With this data, I found the shortest path within six degrees that starts from my direct friends and comes back to me on Facebook. Also, I collected data of recent closeness by combining the number of mentions each friend is mentioned in my recent SNS notifications with my subjective closeness. My intention was to briefly check the following two things - (1) Does the concept of “six degrees of Kevin Bacon” also apply to my relationships on Facebook? (2) Does the shortest path have any relationship with recent closeness? The answer for the first question was "most of the time," since there were several exceptions. For the second question, the answer was definitely "yes", since there was a high correlation between recent closeness and the degree in the shortest path. I thought that my relationships are relatively distributed, because with the other person’s data, I believe the results might have been much simpler ending up with only two or three degrees.<br><br><strong>How to Read.</strong> Each line coming straight out from the center of the circle represents my direct friend who is one degree away from me. The innermost part of the circle is recent closeness visualized as a line graph. Then, the innermost node refers to the friend of my friend, not my direct friend. So if the number of degrees is 2, the path is ‘my friend - friend’s friend - me’. If the path was found within six degrees, the vertices and edges were colored gray, whereas if not, the vertices and edges were colored blue—the vertices of me myself were colored yellow. The dark blue zone corresponds to an infinite zone implying that the connection didn’t come back to me yet.<br><br><img src='https://66.media.tumblr.com/7c68dfaf932ee05a0e085541a602eec4/tumblr_inline_pjzlchpmns1w8f964_540.gif' width='400'><br><br><strong>Implementation.</strong> For implementation, I used d3.js, which was also introduced in class by Professor Hong. Since d3.js is easily used together with web standards, I made an interactive version—nothing special except for tooltips, export function, and the buttons to check the small multiples—on the web as the photo above.`;
+                    
+                    openModal();
+                }
+        
+                document.getElementById("suggestbot").onclick = function(e) {
+                    if (e.target.tagName == "A")
+                        return;
+
+                    document.getElementById("img-suggestbot").className = "show";
+                    document.getElementById("modal-title").innerHTML = `SuggestBot<br><small>Crowdsourcing Evidence for Debate using Amazon Mechanical Turk. Project at Kixlab (Dec 2018 - Feb 2019)</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
+                    document.getElementById("modal-extra").innerHTML = `
+<div class="extra-links">
+    
+    
+    
+    
+    
+    
+    
+    <a href="https://github.com/kixlab/suggestbot-rails" target="_blank">
+        <i class="fab fa-github" aria-hidden="true"></i> Code
+    </a>
+    
+</div>
+
+
+`;
+                    document.getElementById("modal-content").innerHTML = ``;
+                    
+                    openModal();
+                }
+        
                 document.getElementById("solutionChat").onclick = function(e) {
                     if (e.target.tagName == "A")
                         return;
 
                     document.getElementById("img-solutionChat").className = "show";
                     document.getElementById("modal-title").innerHTML = `SolutionChat<br><small>Real-time Moderator Support for Chat-based Structured Discussion</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -235,68 +353,15 @@ window.onload = function() {
                     openModal();
                 }
         
-                document.getElementById("degrees").onclick = function(e) {
-                    if (e.target.tagName == "A")
-                        return;
-
-                    document.getElementById("img-degrees").className = "show";
-                    document.getElementById("modal-title").innerHTML = `Six Degrees of Jaeyoon Song<br><small>Checking 'six degrees of Kevin Bacon' for my relationships on Facebook</small>`;
-                    document.getElementById("modal-extra").innerHTML = `
-<div class="extra-links">
-    
-    
-    <a href="https://jaeyoon.io/dt4c" target="_blank">
-        <i class="fas fa-link" aria-hidden="true"></i> Link
-    </a>
-    
-    
-    
-    
-    
-    
-</div>
-
-
-`;
-                    document.getElementById("modal-content").innerHTML = `<strong>About.</strong> I collected data of my friends at Facebook, friend lists of those friends, friend lists of those friends of friends, and so on—only up to 6 times. With this data, I found the shortest path within six degrees that starts from my direct friends and comes back to me on Facebook. Also, I collected data of recent closeness by combining the number of mentions each friend is mentioned in my recent SNS notifications with my subjective closeness. My intention was to briefly check the following two things - (1) Does the concept of “six degrees of Kevin Bacon” also apply to my relationships on Facebook? (2) Does the shortest path have any relationship with recent closeness? The answer for the first question was "most of the time," since there were several exceptions. For the second question, the answer was definitely "yes", since there was a high correlation between recent closeness and the degree in the shortest path. I thought that my relationships are relatively distributed, because with the other person’s data, I believe the results might have been much simpler ending up with only two or three degrees.<br><br><strong>How to Read.</strong> Each line coming straight out from the center of the circle represents my direct friend who is one degree away from me. The innermost part of the circle is recent closeness visualized as a line graph. Then, the innermost node refers to the friend of my friend, not my direct friend. So if the number of degrees is 2, the path is ‘my friend - friend’s friend - me’. If the path was found within six degrees, the vertices and edges were colored gray, whereas if not, the vertices and edges were colored blue—the vertices of me myself were colored yellow. The dark blue zone corresponds to an infinite zone implying that the connection didn’t come back to me yet.<br><br><img src='https://66.media.tumblr.com/7c68dfaf932ee05a0e085541a602eec4/tumblr_inline_pjzlchpmns1w8f964_540.gif' width='400'><br><br><strong>Implementation.</strong> For implementation, I used d3.js, which was also introduced in class by Professor Hong. Since d3.js is easily used together with web standards, I made an interactive version—nothing special except for tooltips, export function, and the buttons to check the small multiples—on the web as the photo above.`;
-                    
-                    openModal();
-                }
-        
-                document.getElementById("suggestbot").onclick = function(e) {
-                    if (e.target.tagName == "A")
-                        return;
-
-                    document.getElementById("img-suggestbot").className = "show";
-                    document.getElementById("modal-title").innerHTML = `SuggestBot<br><small>Crowdsourcing Evidence for Debate using Amazon Mechanical Turk. Project at Kixlab (Dec 2018 - Feb 2019)</small>`;
-                    document.getElementById("modal-extra").innerHTML = `
-<div class="extra-links">
-    
-    
-    
-    
-    
-    
-    
-    <a href="https://github.com/kixlab/suggestbot-rails" target="_blank">
-        <i class="fab fa-github" aria-hidden="true"></i> Code
-    </a>
-    
-</div>
-
-
-`;
-                    document.getElementById("modal-content").innerHTML = ``;
-                    
-                    openModal();
-                }
-        
                 document.getElementById("refugees").onclick = function(e) {
                     if (e.target.tagName == "A")
                         return;
 
                     document.getElementById("img-refugees").className = "show";
                     document.getElementById("modal-title").innerHTML = `Are Refugees Dangerous?<br><small>What people think, what data say, and what media highlight</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -325,6 +390,9 @@ window.onload = function() {
 
                     document.getElementById("img-muggles").className = "show";
                     document.getElementById("modal-title").innerHTML = `Magic Spells All Muggles are Jealous of<br><small>Twelve variations of magic spells that appear in Harry Potter series.</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -353,6 +421,9 @@ window.onload = function() {
 
                     document.getElementById("img-samsung").className = "show";
                     document.getElementById("modal-title").innerHTML = `Matcha - Watcha for Restaurants<br><small>Restaurant recommendation service for Samsung AI Hackathon</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = `<a class="small black mb-2" href="https://research.samsung.com/aichallenge/hackathon">🏆 Won Top Ten Finalist, Samsung Research, Sep 2018 🏆</small>`
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -381,6 +452,9 @@ window.onload = function() {
 
                     document.getElementById("img-ravi").className = "show";
                     document.getElementById("modal-title").innerHTML = `RAVi - Realtime Collaborative Video Chat Summarization<br><small>How to support writing a meeting log while doing a video chat?</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -413,6 +487,9 @@ window.onload = function() {
 
                     document.getElementById("img-bigpearl").className = "show";
                     document.getElementById("modal-title").innerHTML = `Founding member of Bigpearl<br><small>I used to be a member of Bigpearl, a startup for influencer ad campaigns</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -441,6 +518,9 @@ window.onload = function() {
 
                     document.getElementById("img-history").className = "show";
                     document.getElementById("modal-title").innerHTML = `Visualizing Korean Independence Movement<br><small>HCI team project</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -473,6 +553,9 @@ window.onload = function() {
 
                     document.getElementById("img-cube").className = "show";
                     document.getElementById("modal-title").innerHTML = `The Cube<br><small>My previous portfolio website</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -501,6 +584,9 @@ window.onload = function() {
 
                     document.getElementById("img-chartmetric").className = "show";
                     document.getElementById("modal-title").innerHTML = `Intern at Chartmetric<br><small>Short-term intern for front-end development</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -529,6 +615,9 @@ window.onload = function() {
 
                     document.getElementById("img-music").className = "show";
                     document.getElementById("modal-title").innerHTML = `Music of Bullshit (아무말음악잔치)<br><small>Any sound can become a piece of music! A platform where users can collaboratively compose with any kind of nonsense sound</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = `<a class="small black mb-2" href="https://www.hangyo.com/news/article.html?no=85459">🏆 Won Top Ten Winner ($1,000 AWS Credits), Likelion (supported by AWS Korea), Jul 2017 🏆</small>`
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -557,6 +646,9 @@ window.onload = function() {
 
                     document.getElementById("img-shashagungun").className = "show";
                     document.getElementById("modal-title").innerHTML = `Shashagungun (샤샤건건)<br><small>Web Platform to gather posters of various events in Seoul National University</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = `<a class="small black mb-2" href="https://snulife.com/sandbox/106346747">🏆 Won Winner (1st), SNULife School Service Development Tournament, Feb 2017 🏆</small>`
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
@@ -585,6 +677,9 @@ window.onload = function() {
 
                     document.getElementById("img-oss").className = "show";
                     document.getElementById("modal-title").innerHTML = `OSS Efficiency<br><small>What Is Needed for the Sustainable Success of Open Source Software Projects?</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = `<a class="small black mb-2" href="https://www.hangyo.com/news/article.html?no=85459">🏆 Won Grand Prize (1st), Undergraduate Research Presentation Competition, Korean Production & Operations Management Society, May 2018 🏆</small>`
+                    
                     document.getElementById("modal-extra").innerHTML = `
 <div class="extra-links">
     
