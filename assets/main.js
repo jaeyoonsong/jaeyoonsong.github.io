@@ -53,6 +53,10 @@ window.onload = function() {
     
     
     
+    <a href="https://youtu.be/Xruflul84ik" target="_blank">
+        <i class="fas fa-play" aria-hidden="true"></i> Video
+    </a>
+    
     
     
     
