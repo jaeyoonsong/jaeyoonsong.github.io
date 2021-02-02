@@ -34,6 +34,37 @@ window.onload = function() {
             
         
         
+                document.getElementById("writing").onclick = function(e) {
+                    if (e.target.tagName == "A")
+                        return;
+
+                    document.getElementById("img-writing").className = "show";
+                    document.getElementById("modal-title").innerHTML = `Writing with GPT-3<br><small>Ongoing project about collaborative writing between humans and massive scale language models</small>`;
+                    
+                        document.getElementById("modal-award").innerHTML = "";
+                    
+                    document.getElementById("modal-extra").innerHTML = `
+<div class="extra-links">
+    
+    
+    <a href="https://cci.mit.edu/writing/" target="_blank">
+        <i class="fas fa-link" aria-hidden="true"></i> Link
+    </a>
+    
+    
+    
+    
+    
+    
+</div>
+
+
+`;
+                    document.getElementById("modal-content").innerHTML = `Our ongoing project is about collaborative writing between humans and massive scale language models. I'm particularly excited for this project in that I'm getting a chance to actually use GPT-3! Contact me for more information.`;
+                    
+                    openModal();
+                }
+        
                 document.getElementById("minglr").onclick = function(e) {
                     if (e.target.tagName == "A")
                         return;
